@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  mfcoind:
+    build: .
+    restart: always
+    image: mfcoind:next
+    environment:
+      - RPC_USER=mfcoind
+      - RPC_PASSWORD=mfcoindrpc
+    volumes:
+      - type: bind
+        source: /home/mfcoin/
+        target: /home/mfcoin/.MFC
+    command:
+      -nominting
+      -rpcallowip=*
+    ports:
+      - '22824:22824'
+      - '22825:22825'
