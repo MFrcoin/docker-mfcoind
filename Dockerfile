@@ -1,8 +1,8 @@
 
 FROM centos:7
 
-ARG MFC_VERSION=0.8.0
-ARG MFC_TAG=v.0.8.0.0
+ARG MFC_VERSION=0.8.1
+ARG MFC_TAG=v.0.8.1.0
 
 RUN adduser --system mfcoin
 
